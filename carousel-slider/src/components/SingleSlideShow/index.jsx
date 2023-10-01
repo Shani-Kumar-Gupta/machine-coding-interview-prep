@@ -1,9 +1,9 @@
 import './singleshow.css';
 
-const SingleSlide = () => {
+const SingleSlide = ({ imageURL, text, id }) => {
   return (
     <div className="singleslide__cnt">
-      Single Slide
+      <div></div>
     </div>
   )
 }
@@ -11,7 +11,9 @@ const SingleSlide = () => {
 const SingleSlideShow = ({ imagedata }) => {
   return (
     <div className="singleslideshow__cnt">
-      <SingleSlide />
+      {imagedata.map(item => (
+        <SingleSlide {...item} key={item.id} />
+      ))}
     </div>
   );
 };

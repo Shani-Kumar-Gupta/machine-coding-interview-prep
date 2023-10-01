@@ -10,13 +10,14 @@ const Slide = ({ imageURL, text }) => {
 };
 
 const SlideShow = ({ imagedata }) => {
-  const box = document.querySelector('.slideshow__cnt');
   const btnClickPrev = () => {
+    const box = document.querySelector('.slideshow__cnt');
     let width = box.clientWidth;
     console.log("my width: " + width);
     box.scrollLeft = box.scrollLeft - width;
   }
   const btnClickNxt = () => {
+    const box = document.querySelector('.slideshow__cnt');
     let width = box.clientWidth;
     console.log("my width: " + width);
     box.scrollLeft = box.scrollLeft + width;
